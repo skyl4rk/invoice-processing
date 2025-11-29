@@ -1,0 +1,20 @@
+[project]
+name = "invoice-processing"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "invoice2data>=0.4.5",
+    "ipykernel>=7.1.0",
+    "jsonschema>=4.25.1",
+    "numpy>=2.3.4",
+    "openai>=2.8.0",
+    "pandas>=2.3.3",
+    "pdfplumber>=0.11.8",
+    "pymupdf>=1.26.6",
+    "pypdf2>=3.0.1",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "setuptools>=80.9.0",
+]
