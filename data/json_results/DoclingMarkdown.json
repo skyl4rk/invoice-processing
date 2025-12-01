@@ -1,0 +1,1 @@
+{'invoice_number': 'INV-001', 'invoice_date': '2023-10-01', 'products': [{'product_number': '95064', 'description': 'White Flour 50lb', 'quantity': 1, 'unit_price': 84.95, 'amount': 84.95}], 'total': 512.4}

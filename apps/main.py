@@ -7,7 +7,7 @@ import fitz  # PyMuPDF
 from openai import OpenAI
 import json
 import pandas as pd
-import apps.invoice as inv
+import invoice as inv
 
 
 # Load environment variables

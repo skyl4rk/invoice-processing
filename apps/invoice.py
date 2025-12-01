@@ -73,6 +73,7 @@ def parse_invoice_with_ai(text: str) -> dict:
         ],
         temperature=0.1,  # Low temperature for consistent structured output
         response_format={"type": "json_object"},  # Enforce JSON output (OpenAI feature)
+        max_tokens=100,
     )
 
     json_str = response.choices[0].message.content
@@ -114,6 +115,19 @@ def save_to_sqlite(invoice_data: dict, db_path: str = "../db/invoices.db"):
             FOREIGN KEY (invoice_number) REFERENCES invoices (invoice_number)
         )
     """)
+
+    # Check if invoice exists
+    try:
+        invoice = Invoice(**invoice_data)
+        cursor.execute(
+            "SELECT invoice_number FROM invoices WHERE invoice_number == data.invoice_number"
+        )
+        print("Invoice number not present in database.")
+
+    except ValidationError as e:
+        print(f"❌ Validation error: {e}")
+        conn.close()
+        return
 
     # Validate and insert invoice
     try:
