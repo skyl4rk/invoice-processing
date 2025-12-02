@@ -1,19 +1,21 @@
-import sqlite3
+# import sqlite3
 import os
 from dotenv import load_dotenv
 from typing import List
 from pydantic import BaseModel, ValidationError
-import fitz  # PyMuPDF
+
+# import fitz  # PyMuPDF
 from openai import OpenAI
-import json
+
+# import json
 import pandas as pd
 import invoice as inv
 
 
 # Load environment variables
-load_dotenv()
-api_key = os.getenv("API_KEY")
-client = OpenAI(api_key=api_key)
+# load_dotenv()
+# api_key = os.getenv("API_KEY")
+# client = OpenAI(api_key=api_key)
 
 
 # Pydantic models for structured output
@@ -33,7 +35,7 @@ class Invoice(BaseModel):
 
 
 if __name__ == "__main__":
-    pdf_path = "../data/202501-invoice.pdf"  # Update path to your PDF
+    pdf_path = "../data/invoices_pdf/202501-invoice.pdf"  # Update path to your PDF
 
     if not os.path.exists(pdf_path):
         print(f"❌ PDF not found: {pdf_path}")
@@ -41,6 +43,10 @@ if __name__ == "__main__":
 
     try:
         text = inv.extract_pdf_text(pdf_path)
+
+        print("text output:")
+        print(text)
+
         invoice_data = inv.parse_invoice_with_ai(text)
         inv.save_to_sqlite(invoice_data)
 
