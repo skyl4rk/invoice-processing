@@ -1,7 +1,7 @@
 import os
 from typing import List
 import pandas as pd
-import invoice as inv
+import playground.invoice as inv
 
 
 if __name__ == "__main__":

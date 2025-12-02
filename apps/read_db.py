@@ -1,19 +1,15 @@
 import sqlite3
 
+# Check the data
+conn = sqlite3.connect("../db/invoices.db")
+cursor = conn.cursor()
 
-connection_obj = sqlite3.connect("../db/invoices.db")
-
-cursor_obj = connection_obj.cursor()
-
-statement = """SELECT * FROM invoices"""
-
-cursor_obj.execute(statement)
-
-print("Data rows:")
-output = cursor_obj.fetchall()
-for row in output:
+print("Invoices:")
+for row in cursor.execute("SELECT * FROM invoices"):
     print(row)
 
-connection_obj.commit()
+print("\nProducts:")
+for row in cursor.execute("SELECT * FROM products"):
+    print(row)
 
-connection_obj.close()
+conn.close()

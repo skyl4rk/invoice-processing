@@ -1,7 +1,7 @@
 import sqlite3
+import json
 
-
-txt = """
+invoice_text = r"""
 {
   "invoice_number": "25011",
   "invoice_date": "1/24/2019",
@@ -123,32 +123,68 @@ def save_to_sqlite(invoice_data: dict, db_path: str = "../db/invoices.db"):
         )
     """)
 
-    # Validate and insert invoice
-    try:
-        invoice = invoices(**invoice_data)
-        cursor.execute(
-            "INSERT OR REPLACE INTO invoices (invoice_number, invoice_date, total) VALUES (?, ?, ?)",
-            (invoice.invoice_number, invoice.invoice_date, invoice.total),
-        )
-    except Exception as e:
-        print(f"❌ Validation error: {e}")
+    # Check if invoice already exists
+    cursor.execute(
+        "SELECT 1 FROM invoices WHERE invoice_number = ?",
+        (invoice_data["invoice_number"],),
+    )
+    if cursor.fetchone():
+        print(f"⚠️ Invoice {invoice_data['invoice_number']} already exists, skipping.")
         conn.close()
-        return
+        return False
 
-    # Insert products
-    for product in invoice.products:
+    # Insert invoice
+    cursor.execute(
+        """
+        INSERT OR IGNORE INTO invoices (invoice_number, invoice_date, total)
+        VALUES (?, ?, ?)
+    """,
+        (
+            invoice_data["invoice_number"],
+            invoice_data["invoice_date"],
+            invoice_data["total"],
+        ),
+    )
+
+    # Insert each product
+    for product in invoice_data["products"]:
         cursor.execute(
-            "INSERT OR IGNORE INTO products (product_number, description, quantity, unit_price, amount, invoice_number) VALUES (?, ?, ?, ?, ?, ?)",
+            """
+            INSERT INTO products (product_number, description, quantity, unit_price, amount, invoice_number)
+            VALUES (?, ?, ?, ?, ?, ?)
+        """,
             (
-                product.product_number,
-                product.description,
-                product.quantity,
-                product.unit_price,
-                product.amount,
-                invoice.invoice_number,
+                product["product_number"],
+                product["description"],
+                product["quantity"],
+                product["unit_price"],
+                product["amount"],
+                invoice_data["invoice_number"],
             ),
         )
 
     conn.commit()
     conn.close()
-    print(f"✅ Data saved to {db_path}")
+    print(
+        f"✅ Invoice {invoice_data['invoice_number']} saved with {len(invoice_data['products'])} products."
+    )
+
+
+# Parse JSON string to dict and save
+invoice_data = json.loads(invoice_text)
+save_to_sqlite(invoice_data)
+
+
+# Check the data
+conn = sqlite3.connect("../db/invoices.db")
+cursor = conn.cursor()
+
+print("Invoices:")
+for row in cursor.execute("SELECT * FROM invoices"):
+    print(row)
+
+print("\nProducts:")
+for row in cursor.execute("SELECT * FROM products"):
+    print(row)
+
+conn.close()
