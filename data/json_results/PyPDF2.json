@@ -1,1 +1,1 @@
-{'invoice_number': None, 'invoice_date': None, 'products': []}
+{'invoice_number': None, 'invoice_date': None, 'items': [{'product_number': None, 'description': None, 'quantity': None, 'unit_price': None, 'amount': None}]}
