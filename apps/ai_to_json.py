@@ -18,23 +18,7 @@ client = OpenAI(api_key=api_key)
 def parse_invoice_with_ai(text: str) -> dict:
     """Use AI to extract structured invoice data as JSON."""
     prompt = f"""
-    Analyze this invoice text and extract the following in VALID JSON format ONLY (no extra text/comments):
-    {{
-        "invoice_number": "e.g., INV-123",
-        "invoice_date": "e.g., 2025-01-01",
-        "products": [
-            {{
-                "product_number": "e.g., 95064",
-                "description": "e.g., White Flour 50lb",
-                "quantity": 1,
-                "unit_price": 84.95,
-                "amount": 84.95
-            }}
-        ],
-        "total": 512.40
-    }}
-
-    Text: {text}
+    "Please extract the invoice number, invoice date, product number, description, quantity, unit price, and amount from: {text}"
     """
 
     response = client.chat.completions.create(
@@ -52,10 +36,6 @@ def parse_invoice_with_ai(text: str) -> dict:
     )
 
     json_str = response.choices[0].message.content
-    print(
-        "✅ AI parsed JSON:",
-        json_str[:200] + "..." if len(json_str) > 200 else json_str,
-    )
 
     try:
         data = json.loads(json_str)
@@ -83,12 +63,12 @@ if __name__ == "__main__":
         exit(1)
 
     try:
-        json_result = str(parse_invoice_with_ai(text_path))
+        json_result = parse_invoice_with_ai(text_path)
 
         # Save to file
 
         with open(output_file, "w") as f:
-            f.write(json_result)
+            f.write(str(json_result))
 
     except Exception as e:
         print(f"❌ Error: {e}")
