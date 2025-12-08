@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 import invoice_processing as inv
+import utils
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -19,7 +20,7 @@ if not os.path.exists(pdf_path):
     print(f"❌ PDF not found: {pdf_path}")
     exit(1)
 
-if inv.classify(pdf_path, api_key) == "invoice":
+if utils.classify(pdf_path, api_key) == "invoice":
     # print("invoice detected")
     pdf_text = inv.pdf_reader(pdf_path)
     #    print(pdf_text)
