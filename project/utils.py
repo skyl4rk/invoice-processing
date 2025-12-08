@@ -21,3 +21,17 @@ def classify(doc, key):
     response = client.responses.create(model="gpt-5-nano", input=prompt)
     #    print(response.output_text)
     return response.output_text
+
+
+# This function is a placeholder and is not functional.
+def process_files(dir)
+    # Assign directory
+    dir = r"../data/invoices_pdf"
+
+    # Iterate over files in directory
+    for name in os.listdir(dir):
+        # Open file
+        with open(os.path.join(dir, name)) as f:
+            print(f"Filename: '{name}'")
+            # Read content of file
+            # pdf_file = f.read()
