@@ -1,15 +1,15 @@
 import sqlite3
 
-# db_path = "../db/invoices.db"
+db_path = "../db/invoices.db"
 
-db_path = "../db/shipping_lists.db"
+# db_path = "../db/shipping_lists.db"
 #
 #  Check the data
 conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
-print("Shipping Lists:")
-for row in cursor.execute("SELECT * FROM shipping_lists"):
+print("Invoices:")
+for row in cursor.execute("SELECT * FROM invoices"):
     print(row)
 
 print("\nProducts:")

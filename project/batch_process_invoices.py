@@ -1,6 +1,3 @@
-# This file has not yet been tested.
-
-
 from dotenv import load_dotenv
 import os
 import invoice_processing as inv
