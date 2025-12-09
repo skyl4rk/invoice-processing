@@ -6,6 +6,14 @@ from pydantic import BaseModel
 from typing import List
 
 
+def pdf_reader(doc_path):
+    # PyPDF2 output: pdf to text
+    reader = PdfReader(doc_path)
+    page = reader.pages[0]
+    text = page.extract_text()
+    return text
+
+
 def structured_output(payload, key):
     # Pydantic models for structured output
     class Product(BaseModel):
@@ -21,7 +29,7 @@ def structured_output(payload, key):
         products: List[Product]
 
     # call ai request json formatted output of invoice details
-    prompt = f"Please extract the shipping date, delivery date, invoice number, invoice date, product number, description, and quantity from {payload}. Format as json."
+    prompt = f"Please extract the shipping date, delivery date, invoice number, invoice date, product number, description, and quantity from {payload}. Format as json. For date data, use the format MM/DD/YYYY."
     client = OpenAI(api_key=key)
     response = client.responses.parse(
         model="gpt-5-nano", input=prompt, text_format=Shipping_List

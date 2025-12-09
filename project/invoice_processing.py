@@ -30,7 +30,7 @@ def structured_output(payload, key):
         total: float
 
     # call ai request json formatted output of invoice details
-    prompt = f"Please extract the invoice number, invoice date, product number, description, quantity, unit price, and amount from {payload}. Format as json."
+    prompt = f"Please extract the invoice number, invoice date, product number, description, quantity, unit price, and amount from {payload}. Format as json. For date data, use the format MM/DD/YYYY."
     client = OpenAI(api_key=key)
     response = client.responses.parse(
         model="gpt-5-nano", input=prompt, text_format=Invoice

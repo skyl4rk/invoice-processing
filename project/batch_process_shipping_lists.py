@@ -1,15 +1,16 @@
 from dotenv import load_dotenv
 import os
-import invoice_processing as inv
+import shipping_list_processing as ship
 import utils
+
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
 
 
-# Invoice Batch Loader
+# Shipping List Batch Loader
 # This script will insert all invoice pdfs in this directory into the database:
-data_dir = r"../data/invoices_pdf"
+data_dir = r"../data/shipping_lists_pdf"
 
 # Iterate over files in directory
 for name in os.listdir(data_dir):
@@ -20,7 +21,7 @@ for name in os.listdir(data_dir):
         pdf_doc = name
         pdf_path = data_dir + "/" + pdf_doc
         db_dir = "../db/"
-        db_file = "invoices.db"
+        db_file = "shipping_lists.db"
         db_path = db_dir + db_file
 
         print(f"pdf_path = {pdf_path}")
@@ -29,13 +30,13 @@ for name in os.listdir(data_dir):
             print(f"❌ PDF not found: {pdf_path}")
             exit(1)
         # Ask LLM if the document is a shipping list
-        if utils.classify(pdf_path, api_key) == "invoice":
-            print("Invoice Detected. Waiting on LLM Response.")
-            pdf_text = inv.pdf_reader(pdf_path)
-            #    print(pdf_text)
+        if utils.classify(pdf_path, api_key) == "shipping list":
+            print("Shipping List Detected. Waiting on LLM Response.")
+            pdf_text = ship.pdf_reader(pdf_path)
+            # print(pdf_text)
             # Request pdf data as a structured output JSON response from LLM
-            json_response = inv.structured_output(pdf_text, api_key)
+            json_response = ship.structured_output(pdf_text, api_key)
             print("JSON response requested.")
-            inv.save_to_sqlite(json_response, db_path)
+            ship.save_to_sqlite(json_response, db_path)
         else:
-            print("The document does not appear to be an invoice.")
+            print("The document does not appear to be a shipping list.")
