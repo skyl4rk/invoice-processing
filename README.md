@@ -1,6 +1,8 @@
 The invoice processing agent takes a pdf invoice and shipping list, converts it into text format, checks to see if it is an invoice, shipping list or other filetype, requests that an LLM process the text to extract a structured JSON output which is then inserted in a database.
 
-The main.py script processes the pdf file in the variable pdf_doc.
+The working files are in the project directory. Example files are in the data directory. Sqlite3 databases are in the db directory.
+
+The /project/main.py script processes the pdf file in the variable pdf_doc.
 
 Batch process functions take all pdf files in a directory and processes them all in one process.
 
