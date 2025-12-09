@@ -7,9 +7,9 @@ import utils
 load_dotenv()
 api_key = os.getenv("API_KEY")
 
+pdf_doc = "2502-shipping-list.pdf"
 
 pdf_dir = "../data/shipping_lists_pdf/"  # Update path to your PDF
-pdf_doc = "2502-shipping-list.pdf"
 pdf_path = pdf_dir + pdf_doc
 db_dir = "../db/"
 db_file = "shipping_lists.db"
@@ -41,7 +41,6 @@ if document_type == "shipping list":
     # print(json_response)
     print("JSON Structured Response Requested.")
     ship.save_to_sqlite(json_response, db_path)
-    print("Database Connection Closed.")
 
 if document_type == "other":
     print("This file has not been detected as either an invoice or shipping list.")

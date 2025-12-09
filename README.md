@@ -1,8 +1,10 @@
 The invoice processing agent takes a pdf invoice and shipping list, converts it into text format, checks to see if it is an invoice, shipping list or other filetype, requests that an LLM process the text to extract a structured JSON output which is then inserted in a database.
 
-A batch process function takes all pdf files in a directory and processes them all in one process.
+The main.py script processes the pdf file in the variable pdf_doc.
 
-While this script works for the example invoices, each new type of invoice would need to be configured and checked. There are example processes for various python pdf to text packages. 
+Batch process functions take all pdf files in a directory and processes them all in one process.
+
+While this script works for the example invoices, each new type of invoice would need to be configured and checked. There are example processes for various python pdf to text packages which may help in determining the best method for converting pdf to text. 
 
 Future development:
 
