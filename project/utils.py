@@ -23,8 +23,16 @@ def classify(doc, key):
     return response.output_text
 
 
+def pdf_reader(doc_path):
+    # PyPDF2 output: pdf to text
+    reader = PdfReader(doc_path)
+    page = reader.pages[0]
+    text = page.extract_text()
+    return text
+
+
 # This function is a placeholder and is not functional.
-def process_files(dir)
+def process_files(dir):
     # Assign directory
     dir = r"../data/invoices_pdf"
 
