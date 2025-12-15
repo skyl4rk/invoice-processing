@@ -1,0 +1,96 @@
+2025-12-15 13:28:02
+--------------------------
+Query: are there any parameters that can be added to fitz pdf to text package?
+--------------------------
+Selected LLM: google/gemini-2.5-flash-lite
+--------------------------
+Response: Yes, the `fitz` (PyMuPDF) library offers several parameters to control text extraction. These parameters can significantly affect the output's format and level of detail.
+
+Here's how you can use them with the `get_text()` method:
+
+```python
+import fitz
+
+# Open the PDF document
+doc = fitz.open("your_document.pdf")
+
+# Load a specific page (e.g., page 0 for the first page)
+page_number = 0
+page = doc.load_page(page_number)
+
+# --- Examples of using parameters with get_text() ---
+
+# 1. Plain text (default behavior)
+text = page.get_text("text")
+print("--- Plain Text ---")
+print(text)
+
+# 2. Extracting text as blocks (paragraphs)
+blocks = page.get_text("blocks")
+print("\n--- Text Blocks ---")
+for block in blocks:
+    print(block) # Each block is a tuple: (x0, y0, x1, y1, text, block_no, block_type)
+
+# 3. Extracting text as words
+words = page.get_text("words")
+print("\n--- Words ---")
+for word in words:
+    print(word) # Each word is a tuple: (x0, y0, x1, y1, word, block_no, line_no, word_no)
+
+# 4. Extracting as HTML (includes images and formatting)
+html_content = page.get_text("html")
+print("\n--- HTML Content ---")
+# print(html_content) # Uncomment to see the HTML output
+
+# 5. Extracting as a dictionary (detailed information)
+dict_content = page.get_text("dict")
+print("\n--- Dictionary Output ---")
+# print(dict_content) # Uncomment to see the dictionary output structure
+
+# 6. Extracting as JSON
+json_content = page.get_text("json")
+print("\n--- JSON Output ---")
+# print(json_content) # Uncomment to see the JSON output
+
+# 7. Extracting as raw dictionary (even more detailed)
+raw_dict_content = page.get_text("rawdict")
+print("\n--- Raw Dictionary Output ---")
+# print(raw_dict_content) # Uncomment to see the raw dictionary output structure
+
+# 8. Extracting as raw JSON
+raw_json_content = page.get_text("rawjson")
+print("\n--- Raw JSON Output ---")
+# print(raw_json_content) # Uncomment to see the raw JSON output
+
+# You can also combine parameters for more specific extraction,
+# for example, to preserve whitespace:
+text_with_whitespace = page.get_text("text", flags=fitz.TEXT_PRESERVE_WHITESPACE)
+print("\n--- Text with Preserved Whitespace ---")
+print(text_with_whitespace)
+
+# Close the document
+doc.close()
+```
+
+### Explanation of Common Parameters for `get_text()`:
+
+*   **`"text"`**: This is the default. It returns plain text, similar to copying and pasting from a PDF viewer. It's good for simple text extraction but loses formatting and positional information.
+*   **`"blocks"`**: Returns text organized into blocks (paragraphs). Each block is represented as a tuple containing its bounding box coordinates, the text content, block number, and block type. This is useful for understanding the structure of the text on the page.
+*   **`"words"`**: Extracts text word by word. Similar to `"blocks"`, each word comes with its bounding box coordinates and structural information (block and line numbers).
+*   **`"html"`**: Generates an HTML representation of the page. This is quite comprehensive, including text, images, and some basic formatting. It's great for preserving the visual appearance of the page in a web-friendly format. [medium.com](https://medium.com/@pashamsathwikreddy/unlocking-text-from-pdfs-with-python-my-exploration-010cc2c8cab3) explains how libraries like PyMuPDF can be used for data extraction in various formats.
+*   **`"dict"`** / **`"json"`**: These return a detailed dictionary (or JSON string) containing information about the page's structure, including blocks, lines, spans (text segments with consistent formatting), and characters. This is very useful for programmatic analysis of text layout and properties. [pymupdf.readthedocs.io](https://pymupdf.readthedocs.io/en/latest/tutorial.html) provides detailed API documentation for these extraction options.
+*   **`"rawdict"`** / **`"rawjson"`**: These provide an even more granular level of detail than `"dict"`/`"json"`, including information about each character's origin and more.
+*   **`"xhtml"`**: Similar to HTML but adheres to XML standards.
+
+### Flags (Optional Arguments):
+
+You can also pass integer flags to modify the extraction behavior. Some useful ones include:
+
+*   `fitz.TEXT_PRESERVE_WHITESPACE`: Keeps whitespace characters (spaces, tabs, newlines) as they appear in the PDF.
+*   `fitz.TEXT_PRESERVE_LIGATURES`: Tries to preserve ligatures (e.g., "fi", "fl") as single characters if they are represented that way in the PDF.
+*   `fitz.TEXT_INHIBIT_SPACES`: Prevents the insertion of spaces between words.
+*   `fitz.TEXT_PRESERVE_IMAGES`: (This might not directly apply to `get_text` but is relevant for other extraction methods).
+
+You can combine flags using the bitwise OR operator (`|`).
+
+________________________

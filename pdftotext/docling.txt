@@ -1,0 +1,88 @@
+2025-12-15 13:38:08
+--------------------------
+Query: Query: Query: are there any parameters that can be added to docling pdf to text package?
+--------------------------
+Selected LLM: google/gemini-2.5-flash-lite
+--------------------------
+Response: Yes, the `docling` library provides various options to customize PDF processing and text extraction. These options allow you to control aspects like OCR usage, table extraction, and even the PDF backend.
+
+Here's how you can add parameters to `docling` for text extraction:
+
+```python
+from docling.document_converter import DocumentConverter, PdfFormatOption
+from docling.datamodel.pipeline_options import PdfPipelineOptions, AcceleratorOptions
+from docling.datamodel.base_models import InputFormat
+import multiprocessing
+
+# Define pipeline options
+pipeline_options = PdfPipelineOptions()
+
+# Enable OCR for image-based PDFs
+pipeline_options.do_ocr = True
+
+# Enable table structure extraction
+pipeline_options.do_table_structure = True
+pipeline_options.table_structure_options.do_cell_matching = True # Optional: match cells in extracted tables
+
+# Configure OCR options (e.g., force full-page OCR for scanned documents)
+# You can choose different OCR engines like EasyOcrOptions, TesseractOcrOptions, etc.
+# For example, to force full-page OCR with EasyOCR:
+# from docling.datamodel.pipeline_options import EasyOcrOptions
+# pipeline_options.ocr_options = EasyOcrOptions(force_full_page_ocr=True, lang=["en"])
+
+# Use Tesseract CLI for OCR and force full-page OCR
+from docling.datamodel.pipeline_options import TesseractCliOcrOptions
+pipeline_options.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True)
+
+# Configure accelerator options (e.g., use all CPU cores or GPU if available)
+pipeline_options.accelerator_options = AcceleratorOptions(
+    num_threads=multiprocessing.cpu_count(),
+    device='auto' # 'cuda' for NVIDIA GPU, 'mps' for Apple Silicon, 'cpu' for CPU only
+)
+
+# Specify the PDF backend (e.g., 'pypdfium2' for better compatibility with some PDFs)
+# Note: In docling versions 2.50.0 and later, the backend is specified in PdfFormatOption,
+# not directly in PdfPipelineOptions.
+# pdf_backend = 'pypdfium2' # or 'pytesseract' etc.
+
+# Create and configure the DocumentConverter
+# If using a newer docling version, specify the backend in PdfFormatOption
+from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend # Import if using pypdfium2
+
+doc_converter = DocumentConverter(
+    format_options={
+        InputFormat.PDF: PdfFormatOption(
+            pipeline_options=pipeline_options,
+            # For docling >= 2.50.0, specify backend here:
+            backend=PyPdfiumDocumentBackend # Use the imported backend class
+        )
+    }
+)
+
+# Convert the document
+source_pdf = "your_document.pdf" # Replace with your PDF file path or URL
+result = doc_converter.convert(source_pdf)
+
+# Export the extracted text to Markdown
+extracted_text = result.document.export_to_markdown()
+print(extracted_text)
+
+# You can also export to other formats like JSON or plain text:
+# result.document.export_to_dict()
+# result.document.export_to_markdown(strict_text=True) # For plain text
+```
+
+### Explanation of Key Parameters:
+
+*   **`PdfPipelineOptions`**: This class is the primary way to configure the PDF processing pipeline.
+    *   **`do_ocr`**: Set to `True` to enable Optical Character Recognition (OCR) for image-based PDFs. This is crucial if your PDF contains scanned documents or images of text. [github.com](https://github.com/docling-project/docling/discussions/2182)
+    *   **`do_table_structure`**: Set to `True` to enable table structure detection.
+    *   **`table_structure_options`**: Contains options specific to table extraction, such as `do_cell_matching`.
+    *   **`ocr_options`**: Allows you to specify the OCR engine and its configurations.
+        *   **`force_full_page_ocr=True`**: This is a critical setting for scanned PDFs. It forces OCR to run on the entire page, even if some text is already present. This is often necessary for accurate extraction from scanned documents. [docling-project.github.io](https://docling-project.github.io/docling/examples/full_page_ocr/)
+        *   You can use various OCR backends like `EasyOcrOptions`, `TesseractCliOcrOptions`, `OcrMacOptions` (macOS only), etc. [docling-project.github.io](https://docling-project.github.io/docling/examples/custom_convert/)
+    *   **`accelerator_options`**: Configure hardware acceleration (CPU/GPU). This can speed up processing, especially with OCR. `num_threads` and `device` are common parameters. [ds4sd.github.io](https://ds4sd.github.io/docling/usage/)
+*   **`PdfFormatOption`**: When creating the `DocumentConverter`, you specify `PdfFormatOption` for PDF input.
+    *   **`backend`**: For newer versions of `docling` (e.g., 2.50.0+), you specify the PDF backend here (e.g., `PyPdfiumDocumentBackend`) instead of directly in `PdfPipelineOptions`. This helps in handling complex or scanned PDFs more effectively. [github.com](https://github.com/docling-project/docling/discussions/2182)
+
+Remember to install the necessary dependencies for your chosen OCR backend (like EasyOCR or Tesseract) for `docling` to use them. [github.com](https://github.com/docling-project/docling/discussions/2182)

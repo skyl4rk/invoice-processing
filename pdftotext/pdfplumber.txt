@@ -1,0 +1,74 @@
+2025-12-15 13:31:23
+--------------------------
+Query: Query: are there any parameters that can be added to pdfplumber pdf to text package?
+--------------------------
+Selected LLM: google/gemini-2.5-flash-lite
+--------------------------
+Response: Yes, the `pdfplumber` library offers several parameters to control text extraction. These parameters can significantly affect the output's format and level of detail.
+
+Here's how you can use them with the `extract_text()` method:
+
+```python
+import pdfplumber
+
+with pdfplumber.open("your_document.pdf") as pdf:
+    # Load the first page
+    page = pdf.pages[0]
+
+    # --- Examples of using parameters with extract_text() ---
+
+    # 1. Default text extraction
+    text = page.extract_text()
+    print("--- Default Text Extraction ---")
+    print(text)
+
+    # 2. Extracting text while trying to preserve layout
+    layout_text = page.extract_text(layout=True)
+    print("\n--- Text with Layout Preservation ---")
+    print(layout_text)
+
+    # 3. Adjusting spacing tolerances
+    # x_tolerance: How much horizontal space between characters to consider them on the same "word".
+    # y_tolerance: How much vertical space between lines to consider them on the same "line".
+    custom_tolerance_text = page.extract_text(x_tolerance=10, y_tolerance=5)
+    print("\n--- Custom Tolerance Text Extraction ---")
+    print(custom_tolerance_text)
+
+    # 4. Using x_tolerance_ratio for dynamic tolerance based on font size
+    # This can be very useful as spacing often scales with font size.
+    ratio_tolerance_text = page.extract_text(x_tolerance_ratio=1.5) # e.g., 1.5 times the font_size
+    print("\n--- X Tolerance Ratio Text Extraction ---")
+    print(ratio_tolerance_text)
+
+    # 5. Extracting words with more details
+    words = page.extract_words(
+        x_tolerance=2,
+        y_tolerance=3,
+        keep_blank_chars=True, # Include spaces as characters
+        return_chars=True      # Include constituent characters for each word
+    )
+    print("\n--- Extracted Words (with details) ---")
+    for word in words[:5]: # Print first 5 words for brevity
+        print(word)
+
+    # 6. Extracting lines of text (experimental)
+    text_lines = page.extract_text_lines(layout=True, return_chars=False)
+    print("\n--- Extracted Text Lines ---")
+    for line in text_lines[:5]: # Print first 5 lines
+        print(line)
+
+```
+
+### Explanation of Common Parameters for `extract_text()` and related methods:
+
+*   **`layout=False` (default)**: This is the default behavior. `pdfplumber` inserts spaces where there's a significant horizontal gap between characters and newlines where there's a significant vertical gap between lines. It's a good general-purpose extraction but might not perfectly preserve the visual layout. [github.com](https://github.com/jsvine/pdfplumber)
+*   **`layout=True`**: This option attempts to more closely mimic the structural layout of the text on the page. It uses `x_density` and `y_density` to determine spacing, aiming for a more faithful representation of the original document's appearance.
+*   **`x_tolerance`**: This parameter defines the maximum horizontal gap between characters that will still be considered part of the same "word". Increasing this value can help merge words that are slightly spaced apart. [github.com](https://github.com/jsvine/pdfplumber)
+*   **`y_tolerance`**: This parameter defines the maximum vertical gap between lines that will still be considered part of the same "line" of text. Increasing this can help keep lines that are slightly further apart on the same line in the output.
+*   **`x_tolerance_ratio`**: Introduced in newer versions, this allows the `x_tolerance` to be a ratio of the character's font size. This is very useful because text spacing often scales with font size. For example, `x_tolerance_ratio=1.5` means the tolerance will be 1.5 times the font size of the preceding character. [github.com](https://github.com/jsvine/pdfplumber)
+*   **`extract_words()` parameters**: This method provides more granular control, allowing you to:
+    *   `keep_blank_chars`: Treat spaces and other blank characters as part of words.
+    *   `return_chars`: Include the individual characters that make up each word in the output.
+    *   `split_at_punctuation`: Split words at punctuation marks.
+
+*   **`extract_text_lines()`**: This is an experimental feature that returns lines of text as dictionaries, which can be useful for more structured text processing. [github.com](https://github.com/jsvine/pdfplumber)

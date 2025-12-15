@@ -110,5 +110,5 @@ def save_to_sqlite(ship_data: dict, db_path: str = "../db/shipping_lists.db"):
     conn.commit()
     conn.close()
     print(
-        f"✅ Invoice {ship_data['invoice_number']} saved with {len(ship_data['products'])} products."
+        f"✅ Shipping List {ship_data['invoice_number']} saved with {len(ship_data['products'])} products."
     )
