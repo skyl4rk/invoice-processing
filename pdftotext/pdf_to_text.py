@@ -56,7 +56,7 @@ print("Begin pdfplumber:")
 
 with pdfplumber.open(pdf_path) as pdf:
     for page in pdf.pages:
-        pdf_text = page.extract_text()
+        pdf_text = page.extract_text(layout=True)
         print(pdf_text)
         output_file = "../output/Pdfplumber.txt"
         with open(output_file, "a") as f:

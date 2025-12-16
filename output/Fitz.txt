@@ -1,80 +1,330 @@
+SHIPPING LIST
 Prairie Distributing
-INVOICE
-123 Main Street
-Hamilton, IL 44416
-(321) 456-7890
-INVOICE #
 DATE
+123 Main Street
+01/07/2025
+Hamilton, IL 44416
+INVOICE NO.
+(321) 456-7890
 25011
-1/24/2019
-CUSTOMER ID
-TERMS
-564
-Net 30 Days
+CUSTOMER NO.
+546
 BILL TO
-[42]
 SHIP TO
+ATTN: Name / Dept
+ATTN: Name / Dept
 Cake Bakery
-Cake Bakery
+Company Name
 123 Main Street
 123 Main Street
 New Buffalo, MI 44416
-New Buffalo, MI 44416
+Hamilton, OH 44416
 (321) 456-7890
 (321) 456-7890
-PRODU
+P.O NO. 
+SALES PERSON
+SHIP VIA
+SHIPPING DATE
+internet
+Truck 20
+01/07/2025
+SHIPPING METHOD
+SHIPPING TERMS
+PAYMENT
+DELIVERY DATE
+Route 3
+invoice
+01/07/2025
+ITEM NO.
 DESCRIPTION
 QTY
-UNIT PRICE
-AMOUNT
-95064 White Flour Natural, Premium, Unbleached, 50lb
+95064
+White Flour Natural, Premium, Unbleached, 50lb
 1
-84.95                             84.95 
-95073 Cake Flour, Premium 50lb
+95073
+Cake Flour, Premium 50lb
 1
-96.95                             96.95 
-240206 Shortening, Organic, All-Vegetable, 24 oz
+240206
+Shortening, Organic, All-Vegetable, 24 oz
 1
-17.95                             17.95 
-210241 Sugar, Powdered Confectioners, 5X, 50lb
+210241
+Sugar, Powdered Confectioners, 5X, 50lb
 1
-98.95                             98.95 
-232054 Raspberry Preserves, Organic 15lb
+232054
+Raspberry Preserves, Organic 15lb
 1
-65.95                             65.95 
-271674 Cacao, Organic, 20lb
+271674
+Cacao, Organic, 20lb
 1
-56.95                             56.95 
-393959 Milk, Homogenized, 1 gallon
+393959
+Milk, Homogenized, 1 gallon
 1
-4.95                               4.95 
-548848 Eggs, Grade A, 24 eggs
+548848
+Eggs, Grade A, 24 eggs
 1
-12.95                             12.95 
-437894 Baking Powder, 1lb
+437894
+Baking Powder, 1lb
 1
-22.95                             22.95 
-654445 Salt, 5lb
+654445
+Salt, 5lb
 1
-9.95                               9.95 
-893798 Aprons, Bakery, Large
+893798
+Aprons, Bakery, Large
 1
-19.95                             19.95 
-908098 Cake Pan, 9” x 17”
+908098
+Cake Pan, 9” x 17”
 1
-19.95                             19.95 
-                                  -   
-                                  -   
-                                  -   
-                                  -   
-                                  -   
-                                  -   
-Thank you for your business!
-TOTAL
-                   512.40 
-  
-If you have any questions about this invoice, please contact
+THANK YOU
+For questions concerning this invoice, please contact
+Name, (321) 456-7890, Email Address
 billing@prairiedist.com
 baker@cakebakery.com
+billing@prairiedist.com
+SHIPPING LIST
+Prairie Distributing
+DATE
+123 Main Street
+01/07/2025
+Hamilton, IL 44416
+INVOICE NO.
+(321) 456-7890
+25011
+CUSTOMER NO.
+546
+BILL TO
+SHIP TO
+ATTN: Name / Dept
+ATTN: Name / Dept
+Cake Bakery
+Company Name
+123 Main Street
+123 Main Street
+New Buffalo, MI 44416
+Hamilton, OH 44416
+(321) 456-7890
+(321) 456-7890
+P.O NO. 
+SALES PERSON
+SHIP VIA
+SHIPPING DATE
+internet
+Truck 20
+01/07/2025
+SHIPPING METHOD
+SHIPPING TERMS
+PAYMENT
+DELIVERY DATE
+Route 3
+invoice
+01/07/2025
+ITEM NO.
+DESCRIPTION
+QTY
+95064
+White Flour Natural, Premium, Unbleached, 50lb
+1
+95073
+Cake Flour, Premium 50lb
+1
+240206
+Shortening, Organic, All-Vegetable, 24 oz
+1
+210241
+Sugar, Powdered Confectioners, 5X, 50lb
+1
+232054
+Raspberry Preserves, Organic 15lb
+1
+271674
+Cacao, Organic, 20lb
+1
+393959
+Milk, Homogenized, 1 gallon
+1
+548848
+Eggs, Grade A, 24 eggs
+1
+437894
+Baking Powder, 1lb
+1
+654445
+Salt, 5lb
+1
+893798
+Aprons, Bakery, Large
+1
+908098
+Cake Pan, 9” x 17”
+1
+THANK YOU
+For questions concerning this invoice, please contact
+Name, (321) 456-7890, Email Address
+billing@prairiedist.com
 baker@cakebakery.com
 billing@prairiedist.com
+SHIPPING LIST
+Prairie Distributing
+DATE
+123 Main Street
+01/07/2025
+Hamilton, IL 44416
+INVOICE NO.
+(321) 456-7890
+25011
+CUSTOMER NO.
+546
+BILL TO
+SHIP TO
+ATTN: Name / Dept
+ATTN: Name / Dept
+Cake Bakery
+Company Name
+123 Main Street
+123 Main Street
+New Buffalo, MI 44416
+Hamilton, OH 44416
+(321) 456-7890
+(321) 456-7890
+P.O NO. 
+SALES PERSON
+SHIP VIA
+SHIPPING DATE
+internet
+Truck 20
+01/07/2025
+SHIPPING METHOD
+SHIPPING TERMS
+PAYMENT
+DELIVERY DATE
+Route 3
+invoice
+01/07/2025
+ITEM NO.
+DESCRIPTION
+QTY
+95064
+White Flour Natural, Premium, Unbleached, 50lb
+1
+95073
+Cake Flour, Premium 50lb
+1
+240206
+Shortening, Organic, All-Vegetable, 24 oz
+1
+210241
+Sugar, Powdered Confectioners, 5X, 50lb
+1
+232054
+Raspberry Preserves, Organic 15lb
+1
+271674
+Cacao, Organic, 20lb
+1
+393959
+Milk, Homogenized, 1 gallon
+1
+548848
+Eggs, Grade A, 24 eggs
+1
+437894
+Baking Powder, 1lb
+1
+654445
+Salt, 5lb
+1
+893798
+Aprons, Bakery, Large
+1
+908098
+Cake Pan, 9” x 17”
+1
+THANK YOU
+For questions concerning this invoice, please contact
+Name, (321) 456-7890, Email Address
+billing@prairiedist.com
+baker@cakebakery.com
+billing@prairiedist.com
+<div id="page0" style="width:612.0pt;height:792.0pt">
+<p style="top:48.0pt;left:443.0pt;line-height:17.8pt"><span style="font-family:NotoSans,serif;font-size:17.8pt;color:#808080">SHIPPING LIST</span></p>
+<p style="top:97.0pt;left:49.5pt;line-height:8.9pt"><span style="font-family:NotoSans,serif;font-size:8.9pt;color:#203864">Prairie Distributing</span></p>
+<p style="top:97.8pt;left:513.6pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">DATE</span></b></p>
+<p style="top:113.5pt;left:59.6pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#203864">123 Main Street</span></p>
+<p style="top:113.5pt;left:501.4pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">01/07/2025</span></p>
+<p style="top:129.5pt;left:53.8pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#203864">Hamilton, IL 44416</span></p>
+<p style="top:129.8pt;left:500.0pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">INVOICE NO.</span></b></p>
+<p style="top:145.5pt;left:61.6pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#203864">(321) 456-7890</span></p>
+<p style="top:145.5pt;left:511.3pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">25011</span></p>
+<p style="top:161.9pt;left:495.6pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">CUSTOMER NO.</span></b></p>
+<p style="top:177.6pt;left:515.8pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">546</span></p>
+<p style="top:202.6pt;left:75.6pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">BILL TO</span></b></p>
+<p style="top:202.6pt;left:391.9pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">SHIP TO</span></b></p>
+<p style="top:218.3pt;left:53.1pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">ATTN: Name / Dept</span></p>
+<p style="top:218.3pt;left:391.9pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">ATTN: Name / Dept</span></p>
+<p style="top:234.3pt;left:66.1pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">Cake Bakery</span></p>
+<p style="top:234.3pt;left:391.9pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">Company Name</span></p>
+<p style="top:250.3pt;left:59.6pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">123 Main Street</span></p>
+<p style="top:250.3pt;left:391.9pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">123 Main Street</span></p>
+<p style="top:266.3pt;left:46.6pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">New Buffalo, MI 44416</span></p>
+<p style="top:266.3pt;left:391.9pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">Hamilton, OH 44416</span></p>
+<p style="top:282.3pt;left:61.6pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">(321) 456-7890</span></p>
+<p style="top:282.3pt;left:391.9pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">(321) 456-7890</span></p>
+<p style="top:323.4pt;left:74.6pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">P.O NO. </span></b></p>
+<p style="top:323.4pt;left:210.7pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">SALES PERSON</span></b></p>
+<p style="top:323.4pt;left:419.6pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">SHIP VIA</span></b></p>
+<p style="top:323.4pt;left:495.3pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">SHIPPING DATE</span></b></p>
+<p style="top:339.1pt;left:74.2pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">internet</span></p>
+<p style="top:339.1pt;left:418.9pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">Truck 20</span></p>
+<p style="top:339.1pt;left:501.4pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">01/07/2025</span></p>
+<p style="top:355.4pt;left:55.4pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">SHIPPING METHOD</span></b></p>
+<p style="top:355.4pt;left:206.3pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">SHIPPING TERMS</span></b></p>
+<p style="top:355.4pt;left:417.7pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">PAYMENT</span></b></p>
+<p style="top:355.4pt;left:495.8pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">DELIVERY DATE</span></b></p>
+<p style="top:371.1pt;left:74.8pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">Route 3</span></p>
+<p style="top:371.1pt;left:421.7pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">invoice</span></p>
+<p style="top:371.1pt;left:501.4pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#000000">01/07/2025</span></p>
+<p style="top:396.1pt;left:72.8pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">ITEM NO.</span></b></p>
+<p style="top:396.1pt;left:212.3pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">DESCRIPTION</span></b></p>
+<p style="top:396.1pt;left:358.1pt;line-height:7.1pt"><b><span style="font-family:NotoSans,serif;font-size:7.1pt;color:#203864">QTY</span></b></p>
+<p style="top:413.2pt;left:76.8pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">95064</span></p>
+<p style="top:413.2pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">White Flour Natural, Premium, Unbleached, 50lb</span></p>
+<p style="top:413.2pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:429.2pt;left:76.8pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">95073</span></p>
+<p style="top:429.2pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Cake Flour, Premium 50lb</span></p>
+<p style="top:429.2pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:445.2pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">240206</span></p>
+<p style="top:445.2pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Shortening, Organic, All-Vegetable, 24 oz</span></p>
+<p style="top:445.2pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:461.2pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">210241</span></p>
+<p style="top:461.2pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Sugar, Powdered Confectioners, 5X, 50lb</span></p>
+<p style="top:461.2pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:477.2pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">232054</span></p>
+<p style="top:477.2pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Raspberry Preserves, Organic 15lb</span></p>
+<p style="top:477.2pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:493.3pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">271674</span></p>
+<p style="top:493.3pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Cacao, Organic, 20lb</span></p>
+<p style="top:493.3pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:509.3pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">393959</span></p>
+<p style="top:509.3pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Milk, Homogenized, 1 gallon</span></p>
+<p style="top:509.3pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:525.3pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">548848</span></p>
+<p style="top:525.3pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Eggs, Grade A, 24 eggs</span></p>
+<p style="top:525.3pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:541.3pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">437894</span></p>
+<p style="top:541.3pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Baking Powder, 1lb</span></p>
+<p style="top:541.3pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:557.3pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">654445</span></p>
+<p style="top:557.3pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Salt, 5lb</span></p>
+<p style="top:557.3pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:573.4pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">893798</span></p>
+<p style="top:573.4pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Aprons, Bakery, Large</span></p>
+<p style="top:573.4pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:589.4pt;left:74.4pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">908098</span></p>
+<p style="top:589.4pt;left:134.0pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">Cake Pan, 9&#x201d; x 17&#x201d;</span></p>
+<p style="top:589.4pt;left:385.2pt;line-height:8.9pt"><span style="font-family:LiberationSans,serif;font-size:8.9pt;color:#000000">1</span></p>
+<p style="top:698.8pt;left:147.1pt;line-height:16.0pt"><span style="font-family:NotoSans,serif;font-size:16.0pt;color:#333f50">THANK YOU</span></p>
+<p style="top:729.2pt;left:213.0pt;line-height:8.0pt"><i><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#333f50">For questions concerning this invoice, please contact</span></i></p>
+<p style="top:740.2pt;left:228.5pt;line-height:8.9pt"><span style="font-family:NotoSans,serif;font-size:8.9pt;color:#333f50">Name, (321) 456-7890, Email Address</span></p>
+<p style="top:161.5pt;left:45.7pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#5294e2">billing@prairiedist.com</span></p>
+<p style="top:298.3pt;left:44.3pt;line-height:8.0pt"><span style="font-family:NotoSans,serif;font-size:8.0pt;color:#5294e2">baker@cakebakery.com</span></p>
+<p style="top:757.6pt;left:257.6pt;line-height:8.9pt"><span style="font-family:NotoSans,serif;font-size:8.9pt;color:#5294e2">billing@prairiedist.com</span></p>
+</div>
